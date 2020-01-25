@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function addTennis() {
+  var tennis = document.createElement("B");
+  tennis.innerHTML = "TENNIS";
+  tennis.style.position = "absolute";
+  
+  tennis.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+  tennis.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+  tennis.style.fontSize = (Math.floor(Math.random() * 1400) + 100) + "%";
+  tennis.style.fontFamily = "sans-serif";
+  tennis.style.color = "hsl(" + Math.floor(Math.random() * 256) + ", 100%, 50%";
+  
+  document.body.appendChild(tennis);
+}
+
+function changeBG() {
+  document.body.style.backgroundColor = document.getElementById("bgColor").value;
+}
+
+</script>
+</head>
+<body onload="changeBG()" onkeypress="addTennis()">
+<input type="color" name="bgColor" id="bgColor" oninput="changeBG()" value="#ffb3b3"> mvtennis
+</body>
+</html>
